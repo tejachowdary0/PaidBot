@@ -45,19 +45,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
-                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton(
-                '🔍 Group 🔍', url='https://t.me/vJ_botz'),
-            InlineKeyboardButton(
-                '🤖 Updates', url='https://t.me/VJ_Bots')
-        ], [
-            InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
-        ], [
-            InlineKeyboardButton('🔗 Subscribe YouTube Channel 🔗',
-                                 url=f'https://youtube.com/@Tech_VJ')
+                    InlineKeyboardButton('🔷 GROUP 1 🔷', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔷 GROUP 2 🔷', url='https://t.me/+JBAQJvocrkBhMmNl')
+                ],[
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ],[
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -96,20 +90,14 @@ async def start(client, message):
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
-                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton(
-                '🏆 Group 🏆', url='https://t.me/neha_movie_request'),
-            InlineKeyboardButton(
-                '📣 Updates 📣', url='https://t.me/vj_bots')
-        ], [
-            InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
-        ], [
-            InlineKeyboardButton('🔗 Subscribe YouTube Channel 🔗',
-                                 url=f'https://youtube.com/@Tech_VJ')
+        buttons =[[
+                    InlineKeyboardButton('🔷 GROUP 1 🔷', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔷 GROUP 2 🔷', url='https://t.me/+JBAQJvocrkBhMmNl')
+                ],[
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ],[
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -159,12 +147,9 @@ async def start(client, message):
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
-                         [InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/vj_bot_disscussion'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/VJBots_bot")
-                         ]
+                          InlineKeyboardButton('🔗 Main Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
                         ]
+                        
                     )
                 )
             except FloodWait as e:
@@ -177,12 +162,9 @@ async def start(client, message):
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
-                         [InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/vj_bot_disscussion'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/VJBots_bot")
-                         ]
+                          InlineKeyboardButton('🔗 Main Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
                         ]
+                        
                     )
                 )
             except Exception as e:
@@ -246,14 +228,11 @@ async def start(client, message):
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                         [
-                          InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/vj_bot_disscussion'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/VJBots_bot")
-                         ]
+                    
+                       [
+                          InlineKeyboardButton('🔗 Main Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
                         ]
+                        
                     )
                 )
             filetype = msg.media
@@ -289,14 +268,11 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
-            [
+            
                          [
-                          InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/vj_bot_disscussion'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/VJBots_bot")
-                         ]
+                          InlineKeyboardButton('🔗 Main Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/vj_bots')
                         ]
+                        
                     )
                 )
                     
