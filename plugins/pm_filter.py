@@ -557,11 +557,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         protect_content=True if ident == "filep" else False,
                         reply_markup=IInlineKeyboardMarkup(
                         [
-                         [InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/Neha_Movie_Request'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/Vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/Anjel_neha")
-                         ]
+                         [InlineKeyboardButton('⚡ Movies Gʀᴏᴜᴘ ⚡', url='https://t.me/request_bots'),
+                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/chowdary_channels')
+                       ]
                         ]
                     )
                 )
@@ -603,12 +601,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
             reply_markup=InlineKeyboardMarkup(
-                        [
-                         [InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/Neha_movie_request'),
-                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/Vj_bots')
-                       ],[
-                          InlineKeyboardButton("📣 Bᴏᴛ Oᴡɴᴇʀ 📣", url="t.me/Anjel_neha")
-                         ]
+                         [
+                         [InlineKeyboardButton('⚡ Movies Gʀᴏᴜᴘ ⚡', url='https://t.me/request_bots'),
+                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/chowdary_channels')
+                       ]
                         ]
                     )
                 )
@@ -904,20 +900,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(text=script.SINFO, show_alert=True)
 
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕',
-                                 url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton(
-                '🏆 Group 🏆', url='https://t.me/Neha_movie_request'),
-            InlineKeyboardButton(
-                '📣 Updates 📣', url='https://t.me/VJ_bots')
-        ], [
-            InlineKeyboardButton('📚 Hᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ 🌐', callback_data='about')
-        ], [
-            InlineKeyboardButton('🔗 Subscribe YouTube Channel 🔗',
-                                 url=f'https://youtube.com/@Tech_VJ')
+        buttons =  [[
+                    InlineKeyboardButton('🔷 GROUP 1 🔷', url="https://t.me/request_bots"),
+                    InlineKeyboardButton('🔷 GROUP 2 🔷', url='https://t.me/+JBAQJvocrkBhMmNl')
+                ],[
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ],[
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]] 
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -994,10 +984,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "about":
-        buttons = [[
-            InlineKeyboardButton('⚡ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ⚡', url='https://t.me/vj_botz'),
-            InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/Vj_bots')
-        ],[
+        buttons =  [ [
+                          InlineKeyboardButton('⚡ Movies Gʀᴏᴜᴘ ⚡', url='https://t.me/request_bots'),
+                          InlineKeyboardButton('🔗 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🔗', url='https://t.me/chowdary_channels')
+                       ]
+        [
             InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data')
         ]]
