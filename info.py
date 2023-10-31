@@ -36,10 +36,13 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
-reqst_channel = environ.get('REQST_CHANNEL_ID')
-REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
+
+# Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
+REQ_CHANNEL = environ.get("REQ_CHANNEL", '')
+REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
+JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://heyme106:4dVEjnIWMiaGTEWK@heyme106.479c2kr.mongodb.net/?retryWrites=true&w=majority")
